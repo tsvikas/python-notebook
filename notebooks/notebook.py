@@ -24,11 +24,17 @@
 # %%
 from pathlib import Path
 
-import hvplot.pandas  # noqa: F401
-import matplotlib.pyplot as plt
 import pandas as pd
 from IPython.core.display_functions import display
 
+# %%
+# %matplotlib ipympl
+import matplotlib.pyplot as plt
+
+# %%
+# import hvplot.pandas  # noqa: F401
+
+# %%
 pd.options.display.show_dimensions = True
 pd.options.display.width = 120
 pd.options.mode.copy_on_write = True
