@@ -6,7 +6,7 @@ dependencies = []
 
 [dependency-groups]
 dev = [
-    "jupyterlab>=4.4.5",
-    "ruff>=0.12.8",
-    "rust-just>=1.42.4",
+  "jupyterlab>=4.4.5",
+  "ruff>=0.12.8",
+  "rust-just>=1.42.4",
 ]
