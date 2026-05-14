@@ -8,23 +8,23 @@ repos:
   # Sync Python and pre-commit package versions
   # pyproject.toml -> uv.lock
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.11.14
+    rev: <placeholder_until_update_deps>
     hooks:
       - id: uv-lock
   # uv.lock -> .pre-commit-config.yaml
   - repo: https://github.com/tsvikas/sync-with-uv
-    rev: v0.5.0
+    rev: <placeholder_until_update_deps>
     hooks:
       - id: sync-with-uv
   # .pre-commit-config.yaml -> .pre-commit-config.yaml
   - repo: https://github.com/pre-commit/sync-pre-commit-deps
-    rev: v0.0.3
+    rev: <placeholder_until_update_deps>
     hooks:
       - id: sync-pre-commit-deps
 
   # General hooks
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
+    rev: <placeholder_until_update_deps>
     hooks:
       # Filesystem
       - id: check-illegal-windows-names
@@ -63,7 +63,7 @@ repos:
       - id: pretty-format-json
         exclude_types: [jupyter]
   - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.10.0
+    rev: <placeholder_until_update_deps>
     hooks:
       # Python files
       - id: python-check-blanket-noqa
@@ -81,20 +81,20 @@ repos:
 
   # All files
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.6.1
+    rev: <placeholder_until_update_deps>
     hooks:
       - id: editorconfig-checker
         exclude_types: [jupyter]
 
   # Spell checking
   - repo: https://github.com/adhtruong/mirrors-typos
-    rev: v1.46.1
+    rev: <placeholder_until_update_deps>
     hooks:
       - id: typos
 
   # Markdown files
   - repo: https://github.com/hukkin/mdformat
-    rev: 1.0.0
+    rev: <placeholder_until_update_deps>
     hooks:
       - id: mdformat
         additional_dependencies:
@@ -105,13 +105,13 @@ repos:
 
   # reStructuredText files
   - repo: https://github.com/PyCQA/doc8
-    rev: v2.0.0
+    rev: <placeholder_until_update_deps>
     hooks:
       - id: doc8
 
   # Python files
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.12
+    rev: <placeholder_until_update_deps>
     hooks:
       - id: ruff-check
         alias: ruff-isort
@@ -122,6 +122,6 @@ repos:
 
   # YAML files
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.38.0
+    rev: <placeholder_until_update_deps>
     hooks:
       - id: yamllint
