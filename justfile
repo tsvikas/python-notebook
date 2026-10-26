@@ -9,13 +9,13 @@ alias f := format
 # Update all dependencies
 update-deps:
   uv sync --upgrade
-  uv run pre-commit autoupdate -j "$( (uname -s | grep -q Linux && nproc) || (uname -s | grep -q Darwin && sysctl -n hw.ncpu) || echo 1 )"
+  uv run prek update
   uvx sync-with-uv
-  uv run pre-commit run -a sync-pre-commit-deps
+  uv run prek run -a sync-pre-commit-deps
 
 # Setup the project. Needed after cloning
 prepare:
-  uv run pre-commit install
+  uv run prek install --install-hooks
 
 check-and-push:
   [ -z "$(git status --porcelain)" ]
@@ -28,13 +28,13 @@ format-and-check:
 
 # Run all code quality checks and tests, except pylint
 check:
-  uv run pre-commit run --all-files
+  uv run prek run --all-files
 
 # Format code and files
 format: sync
   just isort
   uv run ruff format
-  uv run pre-commit run --all-files mdformat
+  uv run prek run --all-files mdformat
 
 # Sort imports (using ruff)
 isort: sync
